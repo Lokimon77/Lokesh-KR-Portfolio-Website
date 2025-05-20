@@ -90,11 +90,13 @@ header >*{
 .logo{
     flex-grow: 0;
     font-size: 1.2rem;
+    border: none;
     background: var(--text-gradient-primary);
     font-weight: 600;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-wrap: nowrap;
+    cursor: pointer;
 }
 
 .nav-links-sidebar{

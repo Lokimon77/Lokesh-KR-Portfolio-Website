@@ -25,6 +25,7 @@ const side_projects = document.getElementById('navbar-projects');
 const side_about = document.getElementById('navbar-about');
 
 //NAVBAR-BTNS
+const logo = document.getElementById('logo');
 const nav_home = document.getElementById('a-home');
 const nav_projects = document.getElementById('a-projects');
 const nav_about = document.getElementById('a-about');
@@ -60,6 +61,7 @@ side_home.addEventListener('click', getHome);
 side_about.addEventListener('click', getAbout);
 
 //NAVBAR-FUNCTIONS
+logo.addEventListener('click', getHome)
 nav_home.addEventListener('click', getHome)
 nav_about.addEventListener('click', getAbout)
 
