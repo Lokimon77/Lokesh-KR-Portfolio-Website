@@ -436,6 +436,7 @@ header >*{
 
 .footer p{
     color: var(--text-color);
+    font-size: 0.5rem;
 }
 
 /* MEDIA QUERIES */
