@@ -546,7 +546,7 @@ header >*{
     }
 
     .github-btn{
-        margin-top: 0;
+        margin-top: 0px;
     }
 }
 
@@ -709,6 +709,10 @@ header >*{
         font-size: 1rem;
     }
 
+    .projects{
+        min-height: 65vh;
+    }
+
     .projects h3{
         font-size: 1.8rem;
     }
@@ -716,4 +720,28 @@ header >*{
     .projects h5{
         font-size: 1rem;
     }
+
+    .project-thumbnail-container {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        padding: 20px;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    
+    .project-thumbnail-container::-webkit-scrollbar{
+        display: none;
+    }
+
+  .project-thumbnails {
+        flex: 0 0 80%;
+        margin: 0 10px;
+        scroll-snap-align: start;
+    }
+
+    
 }
