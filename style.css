@@ -456,6 +456,30 @@ header >*{
     
 }
 
+/* THANK YOU SECTION */
+.thank-you{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 15vh;
+    background: var(--loki-div-background);
+}
+
+.thank-you-card{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+}
+
+.thank-you h5{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--colored-section-text);
+    font-weight: 300;
+}
+
 /* FOOTER SECTION */
 .footer{
     /* background: var(--bg-color); */
@@ -610,6 +634,7 @@ header >*{
 
     .projects{
         min-height: 115vh;
+        padding: 30px;
     }
 
     .projects h3{
@@ -806,8 +831,12 @@ header >*{
         font-size: 1rem;
     }
 
-    .projects{
+    .projects.active{
         min-height: 65vh;
+    }
+
+    .projects-card{
+        margin-top: 0px;
     }
 
     .projects h3{
@@ -848,6 +877,14 @@ header >*{
     .about h5{
         font-size: 1rem;
     
+    }
+
+    .thank-you{
+       height: 10vh;
+    }
+
+    .thank-you h5{
+       font-size: 1.5rem;
     }
 
     .footer{
