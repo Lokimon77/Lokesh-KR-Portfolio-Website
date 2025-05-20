@@ -12,6 +12,7 @@
     --theme-icon-hover: rgba(45, 45, 45, 0.095);
     --scroll-bar: rgba(86, 86, 86, 0.3);
     --sidebar-hover-shadow: #454545;
+    --colored-section-text: #ffffff;
 
 }
 
@@ -26,6 +27,8 @@
     --theme-icon-hover: rgba(218, 218, 218, 0.2);
     --scroll-bar: rgba(255, 255, 255, 0.25);
     --sidebar-hover-shadow: #454545;
+    --colored-section-text: #ffffff;
+
 }
 
 ::-webkit-scrollbar{
@@ -58,6 +61,7 @@ body{
     background-color: var(--bg-color);
 }
 
+/* NAVBAR */
 header{
     background-color: var(--bg-color);
     position: fixed;
@@ -178,8 +182,8 @@ header >*{
     display: block;
 }
 
+/* HERO SECTION */
 .hero{
-   /* background-color: green;  */
    height: 85vh;
    display: flex;
    justify-content: center;
@@ -187,9 +191,7 @@ header >*{
 }
 
 .hero-card{
-    /* background-color: gray; */
     display: flex;
-    /* margin-top: 100px; */
     justify-content: center;
     align-items: center;
     width: 85vw;
@@ -251,10 +253,59 @@ header >*{
     max-height: 400px;
 }
 
-.section2{
-    min-height: 85vh;
+/*SKILLS SECTION*/
+.skills{
+    min-height: 50vh;
     background: var(--loki-div-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.skills .skills-card{
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85vw;
+}
+
+.skills h3{
+    color: var(--colored-section-text);
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.skills h5{
+    color: var(--colored-section-text);
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.skills .skills-pills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* max-width: 40vw; */
+}
+
+.skills-pills h4{
+    text-align: center;
+    padding: 10px 20px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    border: 3px solid var(--colored-section-text);
+    border-radius: 10px;
+    flex: 0 1 100px;
+    color: var(--colored-section-text);
+    font-size: 1.3rem;
+}
+
+/* MEDIA QUERIES */
 @media (max-width: 1350px){
 
     .hero{
@@ -286,6 +337,8 @@ header >*{
         max-width: 300px;
         max-height: 300px;
     }
+
+    
 }
 
 @media (max-width: 1000px){
@@ -331,6 +384,25 @@ header >*{
     .hero-img img{
         max-width: 350px;
         max-height: 350px;
+    }
+
+    .skills{
+        min-height: 40vh;
+    }
+
+    .skills h3{
+        font-size: 2rem;
+    }
+
+    .skills h4{
+        font-size: 1.1rem;
+        padding: 5px 10px;
+        margin-right: 8px;
+        margin-bottom: 15px;
+    }
+
+    .skills h5{
+        font-size: 1rem;
     }
 }
 
@@ -472,5 +544,24 @@ header >*{
 
     .hero-content p{
         max-width: 80vw;
+    }
+
+    .skills{
+        min-height: 55vh;
+    }
+
+    .skills h3{
+        font-size: 1.8rem;
+    }
+
+    .skills h4{
+        font-size: 0.9rem;
+        padding: 5px 10px;
+        margin-right: 8px;
+        margin-bottom: 15px;
+    }
+
+    .skills h5{
+        font-size: 1rem;
     }
 }
