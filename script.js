@@ -19,6 +19,50 @@ const p2_link = 'https://github.com/Lokimon77/Simple_Calculator';
 const p3_link = 'https://github.com/Lokimon77/simple_bank_web_app_using_anvil';
 const github_link = 'https://github.com/Lokimon77';
 
+//SIDEBAR-BTNS
+const side_home = document.getElementById('navbar-home');
+const side_projects = document.getElementById('navbar-projects');
+const side_about = document.getElementById('navbar-about');
+
+//NAVBAR-BTNS
+const nav_home = document.getElementById('a-home');
+const nav_projects = document.getElementById('a-projects');
+const nav_about = document.getElementById('a-about');
+
+//PAGES
+const home = document.getElementById('hero');
+const skills = document.getElementById('skills');
+const projects = document.getElementById('projects');
+const about = document.getElementById('about');
+
+//NAV-FUCNTIONS
+const getHome = () => {
+    about.classList.remove('active');
+    sidebar.classList.remove('active');
+    skills.classList.add('active');
+    projects.classList.add('active');
+    home.classList.add('active');
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+const getAbout = () => {
+    about.classList.add('active');
+    sidebar.classList.remove('active');
+    home.classList.remove('active');
+    skills.classList.remove('active');
+    projects.classList.remove('active');
+}
+//SIDEBAR-FUNCTIONS
+side_home.addEventListener('click', getHome);
+side_about.addEventListener('click', getAbout);
+
+//NAVBAR-FUNCTIONS
+nav_home.addEventListener('click', getHome)
+nav_about.addEventListener('click', getAbout)
+
 //WEBSITE-THEME
 const enableDarkmode = () => {
     document.body.classList.add('darkmode');
