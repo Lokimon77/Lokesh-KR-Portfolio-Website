@@ -463,7 +463,7 @@ header >*{
 }
 
 .about h5{
-    color: var(--colored-section-text);
+    color: var(--text-color);
     text-align: justify;
     font-size: 1.3rem;
     font-weight: 300;
