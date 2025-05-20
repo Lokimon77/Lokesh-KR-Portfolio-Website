@@ -16,7 +16,8 @@ const github_btn = document.getElementById('github-btn');
 //PROJECT LINKS
 const p1_link = 'https://github.com/Lokimon77/Twitter-Sentimental-Analysis';
 const p2_link = 'https://github.com/Lokimon77/Simple_Calculator';
-const p3_link = 'https://github.com/Lokimon77/simple_bank_web_app_using_anvil';
+const p3_link = 'https://github.com/Lokimon77/Lokesh-KR-Portfolio-Website';
+const p4_link = 'https://github.com/Lokimon77/simple_bank_web_app_using_anvil';
 const github_link = 'https://github.com/Lokimon77';
 
 //SIDEBAR-BTNS
@@ -35,14 +36,54 @@ const home = document.getElementById('hero');
 const skills = document.getElementById('skills');
 const projects = document.getElementById('projects');
 const about = document.getElementById('about');
+const thank_you = document.getElementById('thank-you');
+const hidden_projects = document.querySelectorAll('.project-thumbnails');
 
+//MEDIA BTNS
+const linkedin_handle = document.getElementById('m1');
+const github_handle = document.getElementById('m2');
+const x_handle = document.getElementById('m3');
+const insta_handle = document.getElementById('m4');
+const email_handle = document.getElementById('m5');
+
+//MEDIA LINKS
+const linkedin_link = 'https://www.linkedin.com/in/lokeshkr110477';
+const x_link = 'https://x.com/Lokeshkr73?t=rP-ZUD6wJK6KAnHqMf5UZg&s=09';
+const insta_link = 'https://www.instagram.com/lokeshkr7x?igsh=anZ1dzBtam1hM2Np';
 //NAV-FUCNTIONS
 const getHome = () => {
-    about.classList.remove('active');
+    home.classList.add('active');
     sidebar.classList.remove('active');
     skills.classList.add('active');
     projects.classList.add('active');
-    home.classList.add('active');
+    thank_you.classList.add('active');
+    about.classList.remove('active');
+    for (let i = 3; i < hidden_projects.length; i++) {
+        hidden_projects[i].classList.remove('active');
+    };
+
+    thumbnail_container.classList.remove('grid');
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+const thumbnail_container = document.getElementById('project-thumbnail-container')
+const getProjects = () =>{
+    home.classList.remove('active');
+    sidebar.classList.remove('active');
+    skills.classList.remove('active');
+    projects.classList.add('active');
+    thank_you.classList.remove('active');
+    about.classList.remove('active');
+    for (let i = 3; i < hidden_projects.length; i++) {
+        hidden_projects[i].classList.add('active');
+    };
+
+    thumbnail_container.classList.add('grid');
+
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
@@ -50,20 +91,30 @@ const getHome = () => {
 }
 
 const getAbout = () => {
-    about.classList.add('active');
-    sidebar.classList.remove('active');
     home.classList.remove('active');
+    sidebar.classList.remove('active');
     skills.classList.remove('active');
     projects.classList.remove('active');
+    thank_you.classList.remove('active');
+    about.classList.add('active');
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+
+    thumbnail_container.classList.remove('grid');
 }
 //SIDEBAR-FUNCTIONS
 side_home.addEventListener('click', getHome);
 side_about.addEventListener('click', getAbout);
+side_projects.addEventListener('click',getProjects);
+
 
 //NAVBAR-FUNCTIONS
-logo.addEventListener('click', getHome)
-nav_home.addEventListener('click', getHome)
-nav_about.addEventListener('click', getAbout)
+logo.addEventListener('click', getHome);
+nav_home.addEventListener('click', getHome);
+nav_about.addEventListener('click', getAbout);
+nav_projects.addEventListener('click',getProjects);
 
 //WEBSITE-THEME
 const enableDarkmode = () => {
@@ -94,18 +145,43 @@ close_btn.addEventListener("click", () =>{
 })
 
 //PROJECT-LINKS
+const openExternalLink = (link) =>{
+    window.open(link, '_blank')
+}
 p1.addEventListener('click', () =>{
-    window.open(p1_link, '_blank');
-})
+    openExternalLink(p1_link);
+});
 
 p2.addEventListener('click', () =>{
-    window.open(p2_link, '_blank');
-})
+    openExternalLink(p2_link);
+});
 
 p3.addEventListener('click', () =>{
-    window.open(p3_link, '_blank');
-})
+    openExternalLink(p3_link);
+});
+
+p4.addEventListener('click', () =>{
+    openExternalLink(p4_link);
+});
 
 github_btn.addEventListener('click', () =>{
-    window.open(github_link, '_blank');
-})
+    openExternalLink(github_link);
+});
+
+//FOOTER LINKS
+linkedin_handle.addEventListener('click', () =>{
+    openExternalLink(linkedin_link);
+});
+
+github_handle.addEventListener('click', () =>{
+    openExternalLink(github_link);
+});
+
+x_handle.addEventListener('click', () =>{
+    openExternalLink(x_link);
+});
+
+insta_handle.addEventListener('click', () =>{
+    openExternalLink(insta_link);
+});
+

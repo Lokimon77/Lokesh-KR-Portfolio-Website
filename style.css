@@ -364,7 +364,19 @@ header >*{
     flex-wrap: wrap;
 }
 
+.project-thumbnail-container.grid{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
 .project-thumbnails{
+    display: none;
+}
+
+.project-thumbnails.active{
     display: flex;
     flex: 0 1 350px;
     flex-direction: column;
@@ -429,7 +441,7 @@ header >*{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--loki-div-background);
+    background: var(--bg-color);
     height: 90vh;
 }
 
@@ -443,7 +455,9 @@ header >*{
 }
 
 .about h3{
-    color: var(--colored-section-text);
+    background: var(--text-gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 2.5rem;
     margin-bottom: 5px;
 }
@@ -458,6 +472,10 @@ header >*{
 
 /* THANK YOU SECTION */
 .thank-you{
+    display: none;
+}
+
+.thank-you.active{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -863,7 +881,7 @@ header >*{
         display: none;
     }
 
-    .project-thumbnails {
+    .project-thumbnails.active {
         flex: 0 0 80%;
         margin: 0 10px;
         scroll-snap-align: start;
