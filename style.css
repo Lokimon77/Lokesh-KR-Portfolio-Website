@@ -319,6 +319,14 @@ header >*{
     flex: 0 1 100px;
     color: var(--colored-section-text);
     font-size: 1.3rem;
+    transform: scale(1);
+    transition: all 0.4s ease-in-out;
+}
+
+.skills-pills h4:hover{
+    background: var(--bg-color);
+    transform: scale(1.05);
+    color: var(--loki-div-hover-color);
 }
 
 /* PROJECTS SECTION */
