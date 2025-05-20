@@ -709,6 +709,7 @@ header >*{
         text-align: left;
         border: none;
         font-size: 1rem;  
+        color: var(--text-color);
     }
 
     .nav-links-btns >*:hover{
