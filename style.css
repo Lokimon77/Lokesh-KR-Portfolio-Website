@@ -401,6 +401,31 @@ header >*{
     cursor: pointer;
 }
 
+.more-projects{
+    background: var(--bg-color);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px;
+    cursor: pointer;
+}
+
+.more-projects svg:active{
+    opacity: 0.75;
+}
+
+.more-projects button{
+    border: none;
+    background-color: var(--bg-color);
+}
+
+.more-projects svg{
+    background-color: var(--bg-color);
+    fill: var(--text-color);
+    width: 60px;
+    height: 60px;
+}
+
 .project-thumbnails:hover{
   opacity: 0.8;
 }
@@ -475,7 +500,7 @@ header >*{
     text-align: justify;
     font-size: 1.3rem;
     font-weight: 300;
-    
+    margin-top: 10px;
 }
 
 /* THANK YOU SECTION */
@@ -859,6 +884,7 @@ header >*{
 
     .projects.active{
         min-height: 65vh;
+        padding: 0;
     }
 
     .projects-card{
@@ -878,13 +904,25 @@ header >*{
         flex-wrap: nowrap;
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
-        padding: 20px;
+        /* padding: 20px; */
         justify-content: flex-start;
         margin-bottom: 20px;
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
     
+    .more-projects{
+        display: flex;
+    }
+
+    .hidden{
+        display: none;
+    }
+
+    .visible{
+        display: flex;
+    }
+
     .project-thumbnail-container::-webkit-scrollbar{
         display: none;
     }
@@ -893,6 +931,15 @@ header >*{
         flex: 0 0 80%;
         margin: 0 10px;
         scroll-snap-align: start;
+        min-width: 360px;
+    }
+
+    .about.active{
+        height: 77vh;
+    }
+
+    .about-card{
+        width: 85vw;
     }
 
     .about h3{

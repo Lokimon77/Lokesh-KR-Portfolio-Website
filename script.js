@@ -11,6 +11,7 @@ const sidebar = document.querySelector('.nav-links-sidebar');
 const p1 = document.getElementById('p1');
 const p2 = document.getElementById('p2');
 const p3 = document.getElementById('p3');
+const more_projects = document.getElementById('more-projects');
 const github_btn = document.getElementById('github-btn');
 
 //PROJECT LINKS
@@ -50,6 +51,7 @@ const email_handle = document.getElementById('m5');
 const linkedin_link = 'https://www.linkedin.com/in/lokeshkr110477';
 const x_link = 'https://x.com/Lokeshkr73?t=rP-ZUD6wJK6KAnHqMf5UZg&s=09';
 const insta_link = 'https://www.instagram.com/lokeshkr7x?igsh=anZ1dzBtam1hM2Np';
+
 //NAV-FUCNTIONS
 const getHome = () => {
     home.classList.add('active');
@@ -58,6 +60,8 @@ const getHome = () => {
     projects.classList.add('active');
     thank_you.classList.add('active');
     about.classList.remove('active');
+    more_projects.classList.remove('hidden');
+    more_projects.classList.add('visible');
     for (let i = 3; i < hidden_projects.length; i++) {
         hidden_projects[i].classList.remove('active');
     };
@@ -78,6 +82,8 @@ const getProjects = () =>{
     projects.classList.add('active');
     thank_you.classList.remove('active');
     about.classList.remove('active');
+    more_projects.classList.remove('visible');
+    more_projects.classList.add('hidden');
     for (let i = 3; i < hidden_projects.length; i++) {
         hidden_projects[i].classList.add('active');
     };
@@ -97,6 +103,8 @@ const getAbout = () => {
     projects.classList.remove('active');
     thank_you.classList.remove('active');
     about.classList.add('active');
+    more_projects.classList.remove('hidden');
+    more_projects.classList.add('visible');
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
@@ -115,6 +123,9 @@ logo.addEventListener('click', getHome);
 nav_home.addEventListener('click', getHome);
 nav_about.addEventListener('click', getAbout);
 nav_projects.addEventListener('click',getProjects);
+
+//OTHER NAVS
+more_projects.addEventListener('click', getProjects);
 
 //WEBSITE-THEME
 const enableDarkmode = () => {
