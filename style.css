@@ -61,6 +61,7 @@
 
 body{
     background-color: var(--bg-color);
+    cursor: url(assets/cursor_pointer/mouse.png),auto;
 }
 
 /* NAVBAR */
@@ -96,7 +97,7 @@ header >*{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-wrap: nowrap;
-    cursor: pointer;
+    cursor: url(assets/cursor_pointer/pointer.png), pointer;
 }
 
 .nav-links-sidebar{
@@ -117,7 +118,7 @@ header >*{
     padding: 2px;
     position: relative;
     font-size: 1rem;
-    cursor: pointer;
+    cursor: url(assets/cursor_pointer/pointer.png), pointer;
 }
 
 .nav-links button::before{
@@ -146,7 +147,7 @@ header >*{
     align-items: center;
     background-color: var(--bg-color);
     display: none;
-    cursor: pointer;
+    cursor: url(assets/cursor_pointer/pointer.png), pointer;
 }
 
 #menu-icon svg{
@@ -167,7 +168,7 @@ header >*{
     justify-content: center;
     align-items: center;
     background-color: var(--bg-color);
-    cursor: pointer;
+    cursor: url(assets/cursor_pointer/pointer.png), pointer;
 }
 
 #theme-btn svg{
@@ -398,7 +399,7 @@ header >*{
     justify-content: center;
     align-items: center;
     transition: all 0.2s ease-in-out;
-    cursor: pointer;
+    cursor: url(assets/cursor_pointer/pointer.png), pointer;
 }
 
 .more-projects{
@@ -407,7 +408,7 @@ header >*{
     justify-content: center;
     align-items: center;
     min-width: 100px;
-    cursor: pointer;
+    cursor: url(assets/cursor_pointer/pointer.png), pointer;
 }
 
 .more-projects svg:active{
@@ -455,10 +456,10 @@ header >*{
     background: var(--loki-div-background);
     border: none;
     color: var(--bg-color);
-    cursor: pointer;
     font-weight: bold;
     box-shadow: 0 0 0 0;
     transition: all 0.35s ease-in-out;
+    cursor: url(assets/cursor_pointer/pointer.png), pointer;
 }
 
 .projects .github-btn:hover{
@@ -495,13 +496,21 @@ header >*{
     margin-bottom: 5px;
 }
 
-.about h5{
+#about-section-text{
     color: var(--text-color);
     text-align: justify;
     font-size: 1.3rem;
     font-weight: 300;
     margin-top: 10px;
 }
+
+/* .about h5{
+    color: var(--text-color);
+    text-align: justify;
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-top: 10px;
+} */
 
 /* THANK YOU SECTION */
 .thank-you{
@@ -554,9 +563,9 @@ header >*{
     margin: 15px;
     border: none;
     background: var(--bg-color);
-    cursor: pointer;
     opacity: 1;
     transition: all 0.2s ease-in-out;
+    cursor: url(assets/cursor_pointer/pointer.png), pointer;
 }
 
 .footer-card .media-handles:hover{
@@ -613,7 +622,7 @@ header >*{
         font-size: 2rem;
     }
 
-    .projects-card h5{
+    #about-section-text{
         font-size: 1rem;
     }
     
@@ -947,7 +956,7 @@ header >*{
         margin-bottom: 5px;
     }
 
-    .about h5{
+    #about-section-text{
         font-size: 1rem;
     
     }

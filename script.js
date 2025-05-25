@@ -52,6 +52,15 @@ const linkedin_link = 'https://www.linkedin.com/in/lokeshkr110477';
 const x_link = 'https://x.com/Lokeshkr73?t=rP-ZUD6wJK6KAnHqMf5UZg&s=09';
 const insta_link = 'https://www.instagram.com/lokeshkr7x?igsh=anZ1dzBtam1hM2Np';
 
+//LOAD TEXT FILES
+fetch('assets/innerhtml_text_files/about_section_text.txt').then(response => response.text()).then(data =>{
+    const formatted = data.replace(/\n{2.}/g,'\n\n');
+
+    const about_txt = document.getElementById('about-section-text');
+    about_txt.innerHTML = formatted.replace(/\n/g,'<br>');
+})
+.catch(error => console.error('Error loading the file', error));
+
 //NAV-FUCNTIONS
 const getHome = () => {
     home.classList.add('active');
