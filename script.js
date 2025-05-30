@@ -19,6 +19,8 @@ const p1_link = 'https://github.com/Lokimon77/Twitter-Sentimental-Analysis';
 const p2_link = 'https://github.com/Lokimon77/Simple_Calculator';
 const p3_link = 'https://github.com/Lokimon77/Lokesh-KR-Portfolio-Website';
 const p4_link = 'https://github.com/Lokimon77/simple_bank_web_app_using_anvil';
+const p5_link = 'https://drive.google.com/drive/folders/17MAwey7WJ0weLdoSl2ufN8TQLGGE1UrJ?usp=sharing';
+const p6_link = 'https://drive.google.com/drive/folders/1DDl34r20vQiKwjMwJEV6rfVpypa4A55X?usp=sharing';
 const github_link = 'https://github.com/Lokimon77';
 
 //SIDEBAR-BTNS
@@ -182,6 +184,14 @@ p3.addEventListener('click', () =>{
 
 p4.addEventListener('click', () =>{
     openExternalLink(p4_link);
+});
+
+p5.addEventListener('click', () =>{
+    openExternalLink(p5_link);
+});
+
+p6.addEventListener('click', () =>{
+    openExternalLink(p6_link);
 });
 
 github_btn.addEventListener('click', () =>{
