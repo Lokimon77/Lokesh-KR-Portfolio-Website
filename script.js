@@ -39,6 +39,7 @@ const nav_about = document.getElementById('a-about');
 const home = document.getElementById('hero');
 const skills = document.getElementById('skills');
 const projects = document.getElementById('projects');
+const certificates = document.getElementById('certificates');
 const about = document.getElementById('about');
 const thank_you = document.getElementById('thank-you');
 const hidden_projects = document.querySelectorAll('.project-thumbnails');
@@ -70,6 +71,7 @@ const getHome = () => {
     sidebar.classList.remove('active');
     skills.classList.add('active');
     projects.classList.add('active');
+    certificates.classList.add('active');
     thank_you.classList.add('active');
     about.classList.remove('active');
     more_projects.classList.remove('hidden');
@@ -92,6 +94,7 @@ const getProjects = () =>{
     sidebar.classList.remove('active');
     skills.classList.remove('active');
     projects.classList.add('active');
+    certificates.classList.remove('active');
     thank_you.classList.remove('active');
     about.classList.remove('active');
     more_projects.classList.remove('visible');
@@ -113,6 +116,7 @@ const getAbout = () => {
     sidebar.classList.remove('active');
     skills.classList.remove('active');
     projects.classList.remove('active');
+    certificates.classList.remove('active');
     thank_you.classList.remove('active');
     about.classList.add('active');
     more_projects.classList.remove('hidden');
