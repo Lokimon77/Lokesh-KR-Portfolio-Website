@@ -13,7 +13,7 @@ const p2 = document.getElementById('p2');
 const p3 = document.getElementById('p3');
 const more_projects = document.getElementById('more-projects');
 const github_btn = document.getElementById('github-btn');
-const cert_btn = document.getElementById('cert-btn');
+// const cert_btn = document.getElementById('cert-btn');
 
 //PROJECT LINKS
 const p1_link = 'https://github.com/Lokimon77/Twitter-Sentimental-Analysis';
@@ -203,9 +203,9 @@ github_btn.addEventListener('click', () =>{
     openExternalLink(github_link);
 });
 
-cert_btn.addEventListener('click',() =>{
-    openExternalLink(linkedin_link);
-});
+// cert_btn.addEventListener('click',() =>{
+//     openExternalLink(linkedin_link);
+// });
 
 //FOOTER LINKS
 linkedin_handle.addEventListener('click', () =>{
