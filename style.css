@@ -400,8 +400,8 @@ header >*{
     height: 250px;
     overflow: hidden;
     background: var(--wnb);
-    border: 5px solid var(--wnb);
     border-radius: 15px;
+    box-shadow: var(--cert-box-shadow);
     margin: 30px;
     justify-content: center;
     align-items: center;
@@ -452,7 +452,7 @@ header >*{
 
 .project-thumbnails p{
     color: var(--bg-color);
-    margin: 5px 0px;
+    margin: 10px 0px;
     font-weight: 600;
 }
 
