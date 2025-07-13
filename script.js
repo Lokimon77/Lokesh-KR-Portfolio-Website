@@ -133,6 +133,11 @@ const getAbout = () => {
 
     thumbnail_container.classList.remove('grid');
 }
+
+document.querySelector(".fake-before").addEventListener("click", () => {
+    sidebar.classList.remove('active');
+});
+
 //SIDEBAR-FUNCTIONS
 side_home.addEventListener('click', getHome);
 side_about.addEventListener('click', getAbout);
