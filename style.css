@@ -83,8 +83,10 @@ header{
     backdrop-filter: blur(8px);
     padding: 1.5rem;
     z-index: 1000;
-    min-height: 80px;
+    min-height: 70px;
     width: 100vw;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .header-decoy{
