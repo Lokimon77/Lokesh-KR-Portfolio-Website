@@ -22,6 +22,7 @@ const p3_link = 'https://github.com/Lokimon77/Lokesh-KR-Portfolio-Website';
 const p4_link = 'https://github.com/Lokimon77/simple_bank_web_app_using_anvil';
 const p5_link = 'https://drive.google.com/drive/folders/17MAwey7WJ0weLdoSl2ufN8TQLGGE1UrJ?usp=sharing';
 const p6_link = 'https://drive.google.com/drive/folders/1DDl34r20vQiKwjMwJEV6rfVpypa4A55X?usp=sharing';
+const p7_link = 'https://github.com/Lokimon77/Terminal-based-Fighting-Game---Mini-Project';
 const github_link = 'https://github.com/Lokimon77';
 
 //SIDEBAR-BTNS
@@ -107,7 +108,7 @@ const getProjects = () =>{
     };
 
     thumbnail_container.classList.add('grid');
-
+    
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
@@ -201,6 +202,10 @@ p5.addEventListener('click', () =>{
 
 p6.addEventListener('click', () =>{
     openExternalLink(p6_link);
+});
+
+p7.addEventListener('click', () =>{
+    openExternalLink(p7_link);
 });
 
 github_btn.addEventListener('click', () =>{

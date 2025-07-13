@@ -1,4 +1,4 @@
-Hi! I'm Lokesh KR. I'm a 3rd-year B.Tech student specializing in Artificial Intelligence and Data Science at Velammal Institute of Technology, Chennai. I'm deeply passionate about building intuitive web and mobile applications, solving complex problems, and exploring the capabilities of machine and deep learning models. 
+Hi! I'm Lokesh KR. I'm a Final year B.Tech student specializing in Artificial Intelligence and Data Science at Velammal Institute of Technology, Chennai. I'm deeply passionate about building intuitive web and mobile applications, solving complex problems, and exploring the capabilities of machine and deep learning models. 
 
 With a strong foundation in Python, Java, JavaScript, HTML, and CSS, I’ve also explored tools like GitHub, Blender, Anvil, Inkscape, and Figma to bring my ideas to life. I'm currently planning to dive deeper into React, Next.js, and MongoDB to expand my full-stack development skills. Beyond tech, I love creating infographics about rockets and spaceflight — topics I’m genuinely fascinated by, alongside philosophy and geopolitics. 
 

@@ -204,7 +204,7 @@ header >*{
 }
 
 .hero.active{
-   height: 85vh;
+   height: 90vh;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -261,6 +261,9 @@ header >*{
     max-height: 400px;
     box-shadow: 0 0 0 0 var(--bg-color);
     transition: all 0.35s ease-in-out;
+    animation: scrollFadeIn linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
 }
 
 .hero-img:hover{
@@ -293,6 +296,9 @@ header >*{
     justify-content: center;
     align-items: center;
     width: 85vw;
+    animation: scrollFadeIn linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
 }
 
 .skills h3{
@@ -328,13 +334,29 @@ header >*{
     color: var(--colored-section-text);
     font-size: 1.3rem;
     transform: scale(1);
-    transition: all 0.4s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.skills-pills h4::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    background: var(--bg-color);
+    transition: width 0.3s ease;
+    z-index: -1;
 }
 
 .skills-pills h4:hover{
     background: var(--bg-color);
-    transform: scale(1.05);
     color: var(--loki-div-hover-color);
+}
+
+.skills-pills h4:hover::before{
+    width: 100%;
 }
 
 /* PROJECTS SECTION */
@@ -357,12 +379,20 @@ header >*{
     justify-content: center;
     align-items: center;
     width: 85vw;
+
 }
 
 .projects-card h3{
-    color: var(--text-color);
+    background: var(--text-gradient-primary);
     font-size: 2.5rem;
     margin-bottom: 5px;
+    font-weight: bolder;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-wrap: nowrap;
+    animation: scrollFadeIn linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 30%;
 }
 
 .projects-card h5{
@@ -371,6 +401,9 @@ header >*{
     font-weight: 300;
     text-align: center;
     margin-bottom: 40px;
+    animation: scrollFadeIn linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 30%;
 }
 
 .project-thumbnail-container{
@@ -407,6 +440,9 @@ header >*{
     align-items: center;
     transition: all 0.2s ease-in-out;
     cursor: url(assets/cursor_pointer/pointer.png), pointer;
+    animation: scrollFadeIn linear;
+    animation-timeline: view();
+    animation-range: entry 0;
 }
 
 .more-projects{
@@ -459,7 +495,7 @@ header >*{
 .projects .github-btn{
     margin-top: 20px;
     padding: 15px;
-    border-radius: 20px;
+    border-radius: 10px;
     background: var(--loki-div-background);
     border: none;
     color: var(--bg-color);
@@ -470,7 +506,7 @@ header >*{
 }
 
 .projects .github-btn:hover{
-    box-shadow: 0 0 15px 3px var(--loki-div-hover-color);
+    box-shadow: 0 0 10px 2px var(--loki-div-hover-color);
 }
 
 /* CERTIFICATES INFINITE SCROLL SECTION */
@@ -487,6 +523,10 @@ header >*{
     justify-content: center;
     align-items: center;
     margin: 50px 0;
+    /* margin-bottom: 50px; */
+    animation: scrollFadeIn linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
 }
 
 .certificates-card::before{
@@ -519,8 +559,12 @@ header >*{
 }
 
 .certificates h3{
-    color: var(--text-color);
+    background: var(--text-gradient-primary);
     font-size: 2.5rem;
+    font-weight: bolder;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-wrap: nowrap;
 }
 
 .certificates-scroll{
@@ -620,7 +664,11 @@ header >*{
     justify-content: center;
     align-items: center;
     background: var(--bg-color);
+    animation: scrollFadeIn linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
     /* height: 90vh; */
+    margin-top: 80px;
 }
 
 .contact-card{
@@ -630,13 +678,17 @@ header >*{
     align-items: center;
     width: 100vw;
     height: 100%;
-    margin: 30px 0;
+    margin-bottom: 50px;
 }
 
 .contact h3{
-    color: var(--text-color);
+    background: var(--text-gradient-primary);
     font-size: 2.5rem;
     margin-bottom: 5px;
+    font-weight: bolder;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-wrap: nowrap;
 }
 
 .contact h5{
@@ -683,7 +735,7 @@ header >*{
     margin-top: 20px;
     padding: 15px;
     width: 7rem;
-    border-radius: 20px;
+    border-radius: 10px;
     background: var(--loki-div-background);
     border: none;
     color: var(--bg-color);
@@ -694,7 +746,7 @@ header >*{
 }
 
 .contact button:hover{
-    box-shadow: 0 0 15px 3px var(--loki-div-hover-color);
+    box-shadow: 0 0 10px 2px var(--loki-div-hover-color);
 }
 
 /* THANK YOU SECTION */
@@ -1147,6 +1199,9 @@ header >*{
 
     .projects-card{
         margin-top: 0px;
+        animation: scrollFadeIn linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 30%;
     }
 
     .projects h3{
@@ -1262,5 +1317,27 @@ header >*{
 
     .contact h5{
         font-size: 1rem;
+    }
+}
+
+@keyframes scrollFadeIn {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes scrollSlideIn{
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
     }
 }
