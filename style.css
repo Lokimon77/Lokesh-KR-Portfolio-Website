@@ -1106,14 +1106,14 @@ header >*{
     .nav-links-btns >*{
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
         transition: all 0.3s ease;
         background: var(--bg-color);
         padding: 20px 30px;
         width: 100%;
         text-align: left;
         border: none;
-        font-size: 1.5rem;  
+        font-size: 1.3rem;  
         color: var(--text-color);
         line-height: 1;
     }
@@ -1124,7 +1124,7 @@ header >*{
 
     .nav-links-btns >* svg{
         fill: var(--text-color);
-        margin-right: 30px;
+        margin-right: 15px;
     }
 
     .nav-btns-sidebar{
