@@ -83,7 +83,7 @@ header{
     backdrop-filter: blur(8px);
     padding: 1.5rem;
     z-index: 1000;
-    min-height: 70px;
+    min-height: 80px;
     width: 100vw;
     padding-left: 50px;
     padding-right: 50px;
@@ -1051,7 +1051,7 @@ header >*{
         z-index: 1000;
         background-color: var(--bg-color);
         box-shadow: 0 0 20px 2px var(--sidebar-hover-shadow);
-        width: 70vw;
+        width: 80vw;
         height: 100vh;
         left: 0;
         top: 0;
@@ -1088,6 +1088,7 @@ header >*{
         justify-content: flex-start;
         padding: 15px 30x;
         z-index: 6;
+        /* border-bottom: 1px solid var(--text-color); */
     }
 
     #close-icon svg{
@@ -1104,14 +1105,15 @@ header >*{
 
     .nav-links-btns >*{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        align-items: flex-start;
         transition: all 0.3s ease;
         background: var(--bg-color);
         padding: 20px 30px;
         width: 100%;
         text-align: left;
         border: none;
-        font-size: 1rem;  
+        font-size: 1.3rem;  
         color: var(--text-color);
     }
 
@@ -1119,12 +1121,14 @@ header >*{
         background: rgba(165, 165, 165, 0.301);
     }
 
+    .nav-links-btns >* svg{
+        fill: var(--text-color);
+        margin-right: 10px;
+    }
+
     .nav-btns-sidebar{
-        color: var(--text-color);
         padding: 2px;
         position: relative;
-        font-size: 1.3rem;
-        z-index: 8;
     }
 
     .logo-sidebar{
@@ -1132,12 +1136,8 @@ header >*{
         width:60vw;
         padding-top: 20px;
         text-align: center;
-        background: var(--text-gradient-primary);
-        font-weight: 600;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-wrap: nowrap;
-        font-size: 1.3rem;
+        color: var(--text-color);
+        font-size: 1rem;
         position: absolute;
         bottom: 20px;
         left: 50%;
@@ -1218,9 +1218,10 @@ header >*{
 
     .projects-card{
         margin-top: 0px;
+        padding: 5px;
         animation: scrollFadeIn linear;
-    animation-timeline: view();
-    animation-range: entry 0 cover 30%;
+        animation-timeline: view();
+        animation-range: entry 0 cover 30%;
     }
 
     .projects h3{
@@ -1241,6 +1242,11 @@ header >*{
         margin-bottom: 20px;
         -ms-overflow-style: none;
         scrollbar-width: none;
+        /* padding-right: 20px; */
+    }
+
+    .project-thumbnail-container > *{
+        scroll-snap-align: start;
     }
     
     .more-projects{
@@ -1342,7 +1348,7 @@ header >*{
 @keyframes scrollFadeIn {
     from {
         opacity: 0;
-        scale: 0.5;
+        scale: 0.7;
     }
     to {
         opacity: 1;
